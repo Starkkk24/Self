@@ -1,195 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Stark Portfolio</title>
-</head>
+{% extends "layout.html" %}
 
-<body>
-    <header>
-        <a href="#" class="logo">Stark</a>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <section class="home" id="home">
-        <div>
-            <img src="Stark.png" alt="Profile Image">
-        </div>
-        <div class="home-content"> 
-           <h1>Hey, I'm <span>Stark</span></h1>
-           <h3 class="typing-text">I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-           <p>Second-year B.Tech student in CSE-IoT, inspired to master AI, coding, and cutting-edge technologies. I dive into projects with creativity, from building personal AI assistants to tackling real-world problems innovatively. Curious about nature, psychology, and design, I stay organized and seek practical solutions. With big ambitions and a bold personality, I'm determined to make an impact in the tech world.</p>
-           
-           <div class="social-icons">
-                <a href="https://github.com/Starkkk24" target="blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mayank-priyadarshi-52257031b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/mayankit24" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/starkkk24/" target="_blank"><i class="fab fa-instagram"></i></a>
-           </div>
-        </div>
-    </section>
+{% block title %}Stark Portfolio - Home{% endblock %}
 
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <div class="skill-icon">
-                    <i class="fab fa-python"></i>
-                </div>
-                <h3>Python</h3>
-                <p>On-Going : ) <br> -Fundamentals (Ongoing) <br> -Flask (Ongoing) <br> -Basic Projects  (Ongoing) <br>-Webscrapping (Planned) </p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:15%"></div>
+{% block content %}
+<section class="home" id="home">
+    <div>
+        <img src="{{ url_for('static', filename='img/Stark.png') }}" alt="Profile Image">
+    </div>
+    <div class="home-content"> 
+       <h1>Hey, I'm <span>Stark</span></h1>
+       <h3 class="typing-text">I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
+       <p>Second-year B.Tech student in CSE-IoT, inspired to master AI, coding, and cutting-edge technologies. I dive into projects with creativity, from building personal AI assistants to tackling real-world problems innovatively. Curious about nature, psychology, and design, I stay organized and seek practical solutions. With big ambitions and a bold personality, I'm determined to make an impact in the tech world.</p>
+       
+       <div class="social-icons">
+            <a href="https://github.com/Starkkk24" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mayank-priyadarshi-52257031b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/mayankit24" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/starkkk24/" target="_blank"><i class="fab fa-instagram"></i></a>
+       </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="skills-container">
+        <div class="skill-box">
+            <div class="skill-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <h3>Python</h3>
+            <p>On-Going : ) <br> -Fundamentals (Ongoing)<br> -Basic Projects  (Ongoing) <br>-Webscrapping (Planned) </p>
+            <div class="skill-bar">
+                <div class="skill-level" style="width:15%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Frontend</h3>
+            <p>On-Going : ) <br> HTML, CSS, JavaScript, React and responsive design. Building interactive and user-friendly web applications.</p>
+            <div class="skill-bar">
+                <div class="skill-level" style="width:10%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-box">
+            <div class="skill-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI & Machine Learning</h3>
+            <p>To-Do : ) <br> TensorFlow, PyTorch, and natural language processing. Building intelligent systems and models.</p>
+            <div class="skill-bar">
+                <div class="skill-level" style="width:4%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-box">
+            <div class="skill-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>IoT Development</h3>
+            <p>To-Do : ) <br> Sensor integration, microcontrollers, and IoT protocols. Creating connected device solutions.</p>
+            <div class="skill-bar">
+                <div class="skill-level" style="width:4%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <div class="projects-container">
+        <div class="project-box">
+            <div class="project-img">
+                <img src="{{ url_for('static', filename='img/project1.jpg') }}" alt="AI Assistant">
+                <div class="project-layer">
+                    <h4>Personal AI Assistant</h4>
+                    <p>A customized voice-controlled AI assistant using Python and natural language processing.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
+        </div>
 
-            <div class="skill-box">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
+        <div class="project-box">
+            <div class="project-img">
+                <img src="{{ url_for('static', filename='img/project2.jpg') }}" alt="Smart Home">
+                <div class="project-layer">
+                    <h4>IoT Smart Home System</h4>
+                    <p>A connected home automation system using Arduino, sensors, and a mobile application.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <h3>Frontend</h3>
-                <p>On-Going : ) <br> HTML, CSS, JavaScript, React and responsive design. Building interactive and user-friendly web applications.</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:10%"></div>
-                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>23btrco018@jainuniversity.ac.in</p>
             </div>
             
-            <div class="skill-box">
-                <div class="skill-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3>AI & Machine Learning</h3>
-                <p>To-Do : ) <br> TensorFlow, PyTorch, and natural language processing. Building intelligent systems and models.</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:4%"></div>
-                </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+91 9341130530</p>
             </div>
             
-            <div class="skill-box">
-                <div class="skill-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>IoT Development</h3>
-                <p>To-Do : ) <br> Sensor integration, microcontrollers, and IoT protocols. Creating connected device solutions.</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width:4%"></div>
-                </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Bengaluru, IN</p>
             </div>
         </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
-        <div class="projects-container">
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1470&auto=format&fit=crop" alt="AI Assistant">
-                    <div class="project-layer">
-                        <h4>Personal AI Assistant</h4>
-                        <p>A customized voice-controlled AI assistant using Python and natural language processing.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+        
+        <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Your Name" required>
             </div>
-
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Smart Home">
-                    <div class="project-layer">
-                        <h4>IoT Smart Home System</h4>
-                        <p>A connected home automation system using Arduino, sensors, and a mobile application.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Your Email" required>
             </div>
-
-            <!-- <div class="project-box">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop" alt="Data Analysis">
-                    <div class="project-layer">
-                        <h4>Data Visualization Platform</h4>
-                        <p>An interactive dashboard for visualizing complex datasets using React and D3.js.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+            <div class="input-group">
+                <input type="text" name="subject" placeholder="Subject" required>
             </div>
-
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1470&auto=format&fit=crop" alt="AR App">
-                    <div class="project-layer">
-                        <h4>AR Learning Application</h4>
-                        <p>An augmented reality app for interactive learning experiences using Unity and ARCore.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
             </div>
-        </div> -->
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>23btrco018@jainuniversity.ac.in</p>
-                </div>
-                
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p>+91 9341130530</p>
-                </div>
-                
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Bengaluru, IN</p>
-                </div>
-            </div>
-            
-            <form class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="input-group">
-                    <input type="text" placeholder="Subject" required>
-                </div>
-                <div class="input-group">
-                    <textarea placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Stark. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="https://github.com/Starkkk24" target="blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mayank-priyadarshi-52257031b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/mayankit24" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/starkkk24/" target="_blank"><i class="fab fa-instagram"></i></a>
-           </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+{% endblock %} 
